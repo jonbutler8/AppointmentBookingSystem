@@ -9,5 +9,5 @@ As this was a group project, not all the work is my own. Some of the main compon
 * Modifying services
 * Setting employee service availability
 * [How to guide](https://github.com/jonbutler8/AppointmentBookingSystem/wiki/How-To-Guide)
-* [Demonstration video](about:blank)
+* [Demonstration video](https://drive.google.com/open?id=0B2zzPuSZOMlLN3pzbUF3SVY2R3c)
 
