@@ -1,0 +1,58 @@
+.day-nav-button {
+    -fx-cursor: hand;
+}
+
+.employee-picker {
+    -fx-background-color: none;
+}
+
+.selected-time-block {
+    -fx-background-color: #236a97;
+}
+
+.selected-time-block:hover {
+    -fx-background-color: #929dc6;
+    -fx-cursor: hand;
+}
+
+.available-time-block {
+    -fx-background-color: #ffffff;
+    -fx-background-insets: 5px 0 0 0;
+}
+
+.available-time-block:hover {
+    -fx-background-insets: 0 0 0 0;
+    -fx-background-color: #236a97;
+    -fx-cursor: hand;
+}
+
+.unavailable-time-block {
+    -fx-background-color: #972323;
+}
+
+.arrow-button {
+    -fx-background-color: none;
+    -fx-border-color: none;
+}
+
+.arrow-button:hover {
+    -fx-cursor: hand;
+}
+
+.date-picker .date-picker-display-node {
+    -fx-background-color: none;
+    -fx-border-color: none;
+    -fx-alignment: CENTER_RIGHT;
+}
+
+.combo-box .list-cell:selected {
+    -fx-alignment: CENTER_RIGHT;
+}
+
+.combo-box-popup .list-view .list-cell {
+    -fx-alignment: center-left;
+}
+
+.scroll-pane, .scroll-pane .viewport {
+    -fx-background-color: none;
+}

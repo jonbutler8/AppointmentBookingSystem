@@ -1,0 +1,79 @@
+.menu-bar .label .text {
+    -fx-fill: #fff;
+}
+
+.menu-item .label .text {
+    -fx-fill: #000;
+}
+
+.menu-item:focused .label .text {
+    -fx-fill: #fff;
+}
+
+/* Form fields and buttons */
+.button {
+    -fx-background-color: none;
+}
+
+.blue-button.button:hover {
+    -fx-text-fill: #fff;
+    -fx-cursor: hand;
+}
+
+.orange-button {
+    -fx-text-fill: #ea9738;
+    -fx-border-color: #ea9738;
+}
+
+.orange-button:hover {
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+    -fx-background-color: #ea9738;
+}
+
+.orange-button:pressed {
+    -fx-text-fill: #ea9738;
+    -fx-background-color: none;
+}
+
+.red-button {
+    -fx-text-fill: #972323;
+    -fx-border-color: #972323;
+}
+
+.blue-button {
+    -fx-min-height: 30px;
+    -fx-text-fill: #236a97;
+    -fx-border-color: #236a97;
+}
+
+.blue-button:hover {
+    -fx-background-color: #236a97;
+}
+
+.blue-button:pressed {
+    -fx-text-fill: #236a97;
+    -fx-background-color: none;
+}
+
+.red-button:hover {
+    -fx-text-fill: #fff;
+    -fx-cursor: hand;
+    -fx-background-color: #972323;
+}
+
+.red-button:pressed {
+    -fx-text-fill: #972323;
+    -fx-background-color: none;
+}
+
+.text-field {
+    -fx-border-color: #cdcdcd;
+    -fx-prompt-text-fill: derive(-fx-control-inner-background,-30%);
+}
+.text-field:focused {
+    -fx-prompt-text-fill: derive(-fx-control-inner-background,-30%);
+}
+.text-field.error {
+    -fx-border-color: red;
+}

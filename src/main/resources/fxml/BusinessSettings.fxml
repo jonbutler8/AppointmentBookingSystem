@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane minHeight="768.0" minWidth="1027.0" style="-fx-background-color: #f3f3f3;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.FXBOHomeView">
+   <center>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: fff; -fx-border-color: #e6e6e6;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutX="16.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" HBox.hgrow="NEVER">
+                     <children>
+                        <ImageView fx:id="banner" fitHeight="500.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <image>
+                              <Image url="@../img/default-banner.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="500.0" style="-fx-border-color: #ededed;" HBox.hgrow="ALWAYS">
+                     <children>
+                        <AnchorPane HBox.hgrow="ALWAYS" />
+                        <HBox>
+                           <children>
+                              <VBox prefWidth="320.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <AnchorPane>
+                                       <children>
+                                          <Label fx:id="businessName" alignment="CENTER" text="Appointment Booking System" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+                                             <font>
+                                                <Font name="Helvetica Neue Light" size="22.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </AnchorPane>
+                                    <AnchorPane>
+                                       <children>
+                                          <Label alignment="CENTER" text="Business management" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="10.0" layoutY="136.0">
+                                       <children>
+                                          <VBox AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                             <children>
+                                                <AnchorPane layoutX="10.0" layoutY="10.0">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" onAction="#selectModifyServices" prefHeight="27.0" prefWidth="200.0" style="-fx-border-color: #236a97;" styleClass="blue-button" text="Modify services" textFill="#236a97" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane>
+                                                   <children>
+                                                      <Button fx:id="businessHours" mnemonicParsing="false" onAction="#selectBusinessHours" prefHeight="27.0" prefWidth="200.0" style="-fx-border-color: #236a97;" styleClass="blue-button" text="Change business hours" textFill="#236a97" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="5.0" />
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="10.0" layoutY="10.0">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" onAction="#selectBusinessSettings" prefHeight="27.0" prefWidth="200.0" style="-fx-border-color: #236a97;" styleClass="blue-button" text="Business settings" textFill="#236a97" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="5.0" />
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="10.0" layoutY="258.0">
+                                       <children>
+                                          <Separator prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="10.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane>
+                                       <children>
+                                          <Label alignment="CENTER" text="Employee management" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="5.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane>
+                                       <children>
+                                          <VBox AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                             <children>
+                                                <AnchorPane>
+                                                   <children>
+                                                      <Button fx:id="addEmployee" mnemonicParsing="false" onAction="#selectAddEmployee" prefHeight="27.0" prefWidth="200.0" style="-fx-border-color: #236a97;" styleClass="blue-button" text="Add an employee" textFill="#236a97" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane>
+                                                   <children>
+                                                      <Button fx:id="employeeTimes" mnemonicParsing="false" onAction="#selectEmployeeTimes" prefHeight="27.0" prefWidth="200.0" style="-fx-border-color: #236a97;" styleClass="blue-button" text="Change employee work times" textFill="#236a97" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="5.0" />
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="10.0" layoutY="37.0">
+                                                   <children>
+                                                      <Button fx:id="employeeService" mnemonicParsing="false" onAction="#selectEmployeeService" prefHeight="27.0" prefWidth="200.0" style="-fx-border-color: #236a97;" styleClass="blue-button" text="Change employee service availability" textFill="#236a97" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="5.0" />
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane />
+                                    <AnchorPane>
+                                       <children>
+                                          <Separator prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="10.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane>
+                                       <children>
+                                          <Label alignment="CENTER" text="Booking management" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="5.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane>
+                                       <children>
+                                          <VBox AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                             <children>
+                                                <AnchorPane>
+                                                   <children>
+                                                      <Button mnemonicParsing="false" onAction="#selectCreateNewBooking" prefHeight="27.0" prefWidth="200.0" style="-fx-border-color: #236a97;" styleClass="blue-button" text="Create new booking" textFill="#236a97" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane>
+                                                   <children>
+                                                      <Button fx:id="selectBookingSummary" mnemonicParsing="false" onAction="#selectBookingSummary" prefHeight="27.0" prefWidth="200.0" style="-fx-border-color: #236a97;" styleClass="blue-button" text="View booking summary" textFill="#236a97" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="5.0" />
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane>
+                                                   <children>
+                                                      <Button fx:id="newBookings" mnemonicParsing="false" onAction="#selectNewBookings" prefHeight="27.0" prefWidth="200.0" style="-fx-border-color: #236a97;" styleClass="blue-button" text="View/change new bookings" textFill="#236a97" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="5.0" />
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane />
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <AnchorPane HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,2 @@
+INSERT INTO `business`(`id`, `name`, `address`, `phoneNumber`) VALUES (NULL, 'Lily Massage', '11 Lily Lane', '0412131415');
+INSERT INTO `business`(`id`, `name`, `address`, `phoneNumber`) VALUES (NULL, 'Sakura Massage', '6 Sakura Street', '0419191915');

@@ -1,0 +1,9 @@
+.service-box {
+    -fx-min-width: 230px;
+}
+
+.service-label {
+    -fx-font-size: 15px;
+    -fx-padding: 5px 0 5px 0;
+    -fx-alignment: center;
+}

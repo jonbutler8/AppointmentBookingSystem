@@ -1,0 +1,20 @@
+.timeblock {
+    -fx-border-width: 1;
+    -fx-border-color: black;
+}
+.timeblock.scheduled-time {
+    -fx-background-color: rgb(158, 213, 250);
+}
+.timeblock.scheduled-time.passed {
+    -fx-background-color: #55f;
+}
+.timeblock.passed {
+    -fx-background-color: #444;
+}
+
+.timeblock.highlighted {
+    -fx-background-color: green;
+}
+.timeblock.highlighted.scheduled-time {
+    -fx-background-color: green;
+}

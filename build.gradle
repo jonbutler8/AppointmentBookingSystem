@@ -1,0 +1,71 @@
+apply plugin: "application"     // Apply the application plugin to run the app
+apply plugin: "jacoco"
+apply plugin: "java"            // Apply the java plugin to add support for Java
+apply plugin: "org.sonarqube"   // Apply SonarQube plugin
+
+// Variables
+mainClassName           = "app.ABS"
+def sonarqubeURL        = "http://d.majoinen.com/sonarqube-sept"
+
+buildscript {
+    repositories {
+        maven { url "https://plugins.gradle.org/m2/" }
+    }
+    dependencies {
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.2.1"
+    }
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile     "com.google.guava:guava:20.0"                   // Guava
+    compile     "org.xerial:sqlite-jdbc:3.16.1"               // SQLite
+    compile     "org.apache.logging.log4j:log4j-api:2.8.1"      // log4j-api
+    compile     "org.apache.logging.log4j:log4j-core:2.8.1"     // log4j-core
+    testCompile "junit:junit:4.12"                              // JUnit
+    testCompile "org.mockito:mockito-core:2.+"                  // Mockito
+}
+
+// Package the app into a jar - optional version number
+jar {
+    from {
+        configurations.compile.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+    // If the buildNumber property is provided, name the build accordingly
+    // Eg: automation-test-b28-v1.4
+    if (project.hasProperty('branchName') && project.hasProperty('buildNumber')) {
+        version = "$branchName-$buildNumber"
+    }
+    manifest {
+        attributes "Main-Class": "$mainClassName"
+    }
+}
+
+// Run code through SonarQube quality tests
+sonarqube {
+    properties {
+        property "sonar.host.url", "$sonarqubeURL"
+    }
+}
+
+// Display unit tests in the console output
+test {
+    ignoreFailures = true
+    afterTest { desc, result ->
+        println "Executing test ${desc.name} [${desc.className}] with result: ${result.resultType}"
+    }
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled = true
+        html.enabled = true
+    }
+}
+
+test.finalizedBy(project.tasks.jacocoTestReport)

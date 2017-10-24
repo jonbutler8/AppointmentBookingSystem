@@ -1,0 +1,11 @@
+.left-column {
+    -fx-min-width: 150px;
+}
+
+.right-column {
+    -fx-min-width: 150px;
+}
+
+.booking-summary {
+    -fx-padding: 0 0 5px 0;
+}

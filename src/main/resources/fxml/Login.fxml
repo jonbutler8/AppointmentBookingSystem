@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane style="-fx-background-color: #f3f3f3;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.FXLoginView">
+   <center>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="400.0" style="-fx-background-color: fff; -fx-border-color: #e6e6e6;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <AnchorPane>
+                     <children>
+                        <Label alignment="CENTER" text="Appointment Booking System" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+                           <font>
+                              <Font name="Helvetica Neue Light" size="22.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <AnchorPane>
+                     <children>
+                        <TextField fx:id="username" accessibleRole="TEXT_FIELD" promptText="Username" style="-fx-background-color: none; -fx-border-color: #cdcdcd;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="5.0">
+                           <font>
+                              <Font name="Helvetica Neue Light" size="13.0" />
+                           </font></TextField>
+                        <Label fx:id="usernameMessage" layoutX="335.0" layoutY="13.0" textFill="RED" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="13.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane>
+                     <children>
+                        <PasswordField fx:id="password" accessibleRole="PASSWORD_FIELD" onAction="#login" promptText="Password" style="-fx-background-color: none; -fx-border-color: #cdcdcd;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="10.0">
+                           <font>
+                              <Font name="Helvetica Neue Light" size="13.0" />
+                           </font></PasswordField>
+                        <Label fx:id="passwordMessage" layoutX="355.0" layoutY="15.0" textFill="RED" AnchorPane.bottomAnchor="9.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="15.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane>
+                     <children>
+                        <Button defaultButton="true" mnemonicParsing="false" onAction="#login" prefHeight="27.0" prefWidth="167.0" style="-fx-border-color: #236a97;" styleClass="blue-button" text="Login" textFill="#236a97" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="10.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane>
+                     <children>
+                        <Label fx:id="loginMessage" alignment="CENTER" textFill="#ff0404" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="5.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane>
+                     <children>
+                        <Separator prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="10.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane>
+                     <children>
+                        <Label alignment="CENTER" text="Need an account?" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane>
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#register" prefHeight="27.0" prefWidth="167.0" style="-fx-border-color: #972323;" styleClass="red-button" text="Register" textFill="#972323" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="5.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </center>
+</BorderPane>

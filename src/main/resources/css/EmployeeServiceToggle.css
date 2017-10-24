@@ -1,0 +1,11 @@
+.combo-box:hover {
+    -fx-cursor: hand;
+}
+
+.combo-box .list-cell:selected {
+    -fx-alignment: CENTER_RIGHT;
+}
+
+.combo-box-popup .list-view .list-cell {
+    -fx-alignment: center-left;
+}
